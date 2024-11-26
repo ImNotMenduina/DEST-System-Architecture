@@ -15,5 +15,33 @@ public class ContCriarSupervisor {
 			default:
 				return null;
 		}
-	}		
+	}
+	
+	public Object servico(Tipos tipoServico, String nome, String email, String senha, String telefone, String nomeEmpresa, String cnpj, String numeroPedidoEstagio, String funcao) {
+		switch (tipoServico) {
+			case CRIAR_SUPERVISOR:
+				Boolean emlValidator = validarEmail(email);
+				
+				Boolean payload = validarCampos(nome ,senha ,telefone ,nomeEmpresa ,cnpj, numeroPedidoEstagio, funcao);
+				
+				Command rt = new CriarSupervisorRTC(nome ,email ,senha ,telefone ,nomeEmpresa ,cnpj, numeroPedidoEstagio, funcao);
+		}
+		
+		return null;
+	}
+	
+	private static boolean validarCampos(String nome, String senha, String telefone, String nomeEmpresa,
+			String cnpj, String numeroPedidoEstagio, String funcao) {
+		return true;
+	}
+
+	public static boolean validarEmail(String email) {
+        if (email == null || email.isEmpty()) {
+            return false;
+        }
+ 
+        String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+        
+        return email.matches(emailRegex);
+    }
 }
