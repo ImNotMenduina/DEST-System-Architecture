@@ -28,7 +28,7 @@ public class CriarSupervisorRTC implements Command{
 	}
 
 	@Override
-	public Object executar() {
+	public Object executar() {		
 		SupervisorDTO supervisor = dados.buscar(numeroPedidoEstagio);
 		
 		if (supervisor == null) {			

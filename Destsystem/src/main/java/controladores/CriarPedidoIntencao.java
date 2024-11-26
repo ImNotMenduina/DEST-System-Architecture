@@ -11,13 +11,13 @@ import java.io.IOException;
  * Servlet implementation class ContCriarPedidoIntencao
  */
 @WebServlet("/pedido_estagio.php")
-public class ContCriarPedidoIntencao extends HttpServlet {
+public class CriarPedidoIntencao extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ContCriarPedidoIntencao() {
+    public CriarPedidoIntencao() {
         super();
         // TODO Auto-generated constructor stub
     }
